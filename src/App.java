@@ -4,34 +4,30 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(isPowerOfTwo(2097152));
+        String s1 = "A" + ('\t' + '\u0003'); // String + int
+        String s2 =  "A" + 12;  // String + int
+        String s3 = 'A' + "12"; // char + string
+        String s4 = 'A' + '1' + "2"; // (int) + "2"
+
+        System.out.println( s1 );
+        System.out.println( s2 );
+        System.out.println( s3 );
+        System.out.println( s4 );
+        System.out.println( "=======================" );
+        int a1 =  '\t';  // int a1 = 9;
+        int a2 = '\u0003'; // int a2 =
+        System.out.println( a1 );
+        System.out.println( a2 );
+        System.out.println( "=======================" );
+        int a3 =  'A';
+        int a4 = '1';
+        System.out.println( a3 + a4 );
+
+
 
 
 
     }
 
 
-    /**
-     * Checks if given <code>value</code> is a power of two.
-     *
-     * @param value any number
-     * @return <code>true</code> when <code>value</code> is power of two, <code>false</code> otherwise
-     */
-    public static boolean isPowerOfTwo(int value) {
-        boolean powerOfTwo = false;
-        int intNumber1 = 0b0000_0000_0000_0000_0000_0000_0000_0001;  // this is 1
-        if(Math.abs(value) == intNumber1){
-            powerOfTwo = true;
-        }
-        // System.out.println(intNumber1);
-        for(int i=0; i<30; i++){
-            intNumber1 = intNumber1 << 1;  // this is multiplication by 2
-            //System.out.println(intNumber1);
-            if(Math.abs(value) == intNumber1){
-                powerOfTwo = true;
-                return powerOfTwo;
-            }
-        }
-        return powerOfTwo; // you implementation here
-    }
 }
