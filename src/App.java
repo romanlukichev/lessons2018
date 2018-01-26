@@ -3,7 +3,8 @@ import java.math.BigInteger;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println(factorial(8));
+        System.out.println(factorial(15).toString(10));
+        System.out.println(factorial(15).doubleValue());
     }
 
     /**
@@ -12,14 +13,17 @@ public class App {
      * @param value positive number
      * @return factorial of <code>value</code>
      */
-    public static int factorial(int value) {
+    public static BigInteger factorial(int value ) {
 
+        Integer myInteger = new Integer(value);
+        BigInteger myBig = new BigInteger(myInteger.toString());
 
         if(value==1){
-            return 1;
+            return BigInteger.ONE;
         }
         else
-        return factorial( value - 1 ) * value; // your implementation here
+        return factorial( value - 1 ).multiply(myBig) ;
+        //factorial( value - 1 ) * value;
     }
 
 }
