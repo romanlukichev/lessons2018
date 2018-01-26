@@ -1,33 +1,27 @@
-import java.security.MessageDigest;
-
 public class App {
 
     public static void main(String[] args) {
-
-        String s1 = "A" + ('\t' + '\u0003'); // String + int
-        String s2 =  "A" + 12;  // String + int
-        String s3 = 'A' + "12"; // char + string
-        String s4 = 'A' + '1' + "2"; // (int) + "2"
-
-        System.out.println( s1 );
-        System.out.println( s2 );
-        System.out.println( s3 );
-        System.out.println( s4 );
-        System.out.println( "=======================" );
-        int a1 =  '\t';  // int a1 = 9;
-        int a2 = '\u0003'; // int a2 =
-        System.out.println( a1 );
-        System.out.println( a2 );
-        System.out.println( "=======================" );
-        int a3 =  'A';
-        int a4 = '1';
-        System.out.println( a3 + a4 );
-
-
-
-
-
+        String s1 = new String("Madam, I'm Adam!");
+        isPalindrome(s1);
     }
 
+    public static boolean isPalindrome(String text) {
+        boolean isPalindrome = false;
+        String text2 = text.replaceAll(  "[^A-Za-z0-9]+" , "");
+        //System.out.println(text2);
+        String text3 = text2.toLowerCase();
+        //System.out.println(text3);
+        StringBuilder text4 = new StringBuilder(text3);
+        text4.reverse();
+        //"^[A-Z]"
+        //"^.*[A-Z]"
+        //"[A-Z]+"
+        //"[^A-Za-z0-9]+"
+        //System.out.println(text4);
+        if(text4.toString().equals(text3)){
+            isPalindrome = true;
+        }
+        return isPalindrome; // your implementation here
+    }
 
 }
