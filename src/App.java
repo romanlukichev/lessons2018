@@ -26,7 +26,7 @@ public class App {
         StringBuilder  resultString = new StringBuilder("");
         for (String role: roles ) {
             //System.out.println("==============================================");
-            resultString.append('\n').append(role).append(":").append('\n');   // UNIX like end of string
+            resultString.append(role).append(":").append('\n');   // UNIX like end of string
 
             for ( int i=0; i<textLines.length; i++){
                 if( role.equals(
@@ -40,8 +40,12 @@ public class App {
                                                                     ).append('\n');
 
                 }
+
+
                 // each String will be split into two-dimensional array by ":" character .
             }
+
+            resultString.append('\n');
 //                we could have used for each loop here  // this syntax looks easier.
 //                for ( String textLine: textLines){
 //                if( role.equals( textLine.split(":")[0]) )
