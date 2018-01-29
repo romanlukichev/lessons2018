@@ -4,7 +4,6 @@
     <list default="true" id="683810f7-d95c-4341-826b-c4843ab4ebcb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/stepic2018/App.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -575,7 +574,7 @@
       <workItem from="1516923870786" duration="6091000" />
       <workItem from="1516999329742" duration="15211000" />
       <workItem from="1517082529497" duration="10167000" />
-      <workItem from="1517182113669" duration="3762000" />
+      <workItem from="1517182113669" duration="3777000" />
     </task>
     <task id="LOCAL-00001" summary="Checks if given String is a palindrome">
       <created>1516943677579</created>
@@ -612,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517113210259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Making list of quotes in a role play. version2.">
+      <created>1517187211039</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1517187211039</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49288000" />
+    <option name="totallyTimeSpent" value="49303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="2568" height="1388" extended-state="6" />
@@ -665,7 +671,8 @@
     <MESSAGE value="Factorial function with using BigInteger type" />
     <MESSAGE value="Function merges two given sorted arrays into one" />
     <MESSAGE value="Making list of quotes in a role play. version1." />
-    <option name="LAST_COMMIT_MESSAGE" value="Making list of quotes in a role play. version1." />
+    <MESSAGE value="Making list of quotes in a role play. version2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Making list of quotes in a role play. version2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
