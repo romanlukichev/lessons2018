@@ -23,10 +23,10 @@ public class App {
 
     private static String printWholeBook( String[] roles , String[] textLines ){
 
-        String resultString ="";
+        StringBuilder  resultString = new StringBuilder("");
         for (String role: roles ) {
-            System.out.println("==============================================");
-            System.out.println(role + ":");   // UNIX like end of string
+            //System.out.println("==============================================");
+            resultString.append('\n').append(role).append(":").append('\n');   // UNIX like end of string
 
             for ( int i=0; i<textLines.length; i++){
                 if( role.equals(
@@ -34,12 +34,11 @@ public class App {
                                )
                   ) {
 
-                    System.out.println(
-                                         (i + 1) + ") " + textLines[i].substring(
-                                                                        textLines[i].indexOf(":")+1, textLines[i].length()
-                                                                         // everything after ":"
-                                                                                )
-                                      );
+
+                    resultString.append((i + 1)).append(") ").append(
+                            textLines[i].substring( textLines[i].indexOf(":")+1, textLines[i].length())
+                                                                    ).append('\n');
+
                 }
                 // each String will be split into two-dimensional array by ":" character .
             }
@@ -49,11 +48,7 @@ public class App {
 //                    System.out.println( textLine.split(":")[1] );
 //                //Because each String will be split into two-dimensional array by ":" character .
 //            }
-
         }
-
-        return resultString;
+        return resultString.toString();
     }
-
-
 }
