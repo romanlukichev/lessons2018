@@ -37,6 +37,7 @@ public class App {
                     System.out.println(
                                          (i + 1) + ") " + textLines[i].substring(
                                                                         textLines[i].indexOf(":")+1, textLines[i].length()
+                                                                         // everything after ":"
                                                                                 )
                                       );
                 }
