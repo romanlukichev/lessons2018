@@ -1,31 +1,9 @@
-import java.util.function.DoubleUnaryOperator;
-
 public class App {
-
     public static void main(String[] args) {
-
-         functionCalculator myCalculator = new functionCalculator();
-
-        System.out.println(integrate(myCalculator, 1, 5));
-
+        byte[] bytes = {82, 90 , 100, 40, 33 , 97, 101, 74, }; //{ R, Z, d, (, !, A, e, J }
+        AsciiCharSequence mySequence = new AsciiCharSequence(bytes);
+        System.out.println(mySequence.toString());
+        System.out.println(mySequence.charAt(2));
+        System.out.println(mySequence.subSequence(1,4));
     }
-
-    public static double integrate(DoubleUnaryOperator f, double a, double b) {
-
-        double sum = 0;
-
-        double x = a;
-        while ( x < b ){
-            //System.out.print(x + " ");
-            sum += f.applyAsDouble(x) * ( (x + 1e-6) - x );
-            //System.out.println(  sum );
-            x = x + 1e-6;
-        }
-
-        return sum;
-    }
-
-
-
-
 }
