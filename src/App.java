@@ -1,9 +1,30 @@
 public class App {
     public static void main(String[] args) {
-        byte[] bytes = {82, 90 , 100, 40, 33 , 97, 101, 74, }; //{ R, Z, d, (, !, A, e, J }
-        AsciiCharSequence mySequence = new AsciiCharSequence(bytes);
-        System.out.println(mySequence.toString());
-        System.out.println(mySequence.charAt(2));
-        System.out.println(mySequence.subSequence(1,4));
+
+        String[] spamArray = {"Go" , "Welcome" , "Hello", "Open"};
+        SpamAnalyzer mySpamAnalyzer = new SpamAnalyzer(spamArray);
+
+        NegativeTextAnalyzer myNegativeWordsAnalyzer = new NegativeTextAnalyzer(); // default constructor
+
+        TooLongTextAnalyzer myLongTextAnazyzer = new TooLongTextAnalyzer(30);
+
+        TextAnalyzer[] myAnalyzers = { mySpamAnalyzer , myNegativeWordsAnalyzer , myLongTextAnazyzer };
+
+        Label result = checkLabels( myAnalyzers , "Aert hdghd fg. Djkl dguyie." );
+        System.out.println(result.toString());
+
+
+
+    }
+
+    public static Label checkLabels(TextAnalyzer[] analyzers, String text) {
+        Label myLabel = Label.OK;
+        for( TextAnalyzer currentAnalyzer: analyzers){
+            myLabel = currentAnalyzer.processText(text);
+            if( myLabel != Label.OK){
+                return myLabel;
+            }
+        }
+        return myLabel;
     }
 }
