@@ -10,7 +10,7 @@ public class App {
 
         TextAnalyzer[] myAnalyzers = { mySpamAnalyzer , myNegativeWordsAnalyzer , myLongTextAnazyzer };
 
-        Label result = checkLabels( myAnalyzers , "Aert hdghd fg. Djkl dguyie." );
+        Label result = checkLabels( myAnalyzers , "Aert hdghd :( fg. Djkl dguyie." );
         System.out.println(result.toString());
 
 

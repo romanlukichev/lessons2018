@@ -1,4 +1,4 @@
-class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer {
+class SpamAnalyzer extends KeywordAnalyzer{
 
     private String[] keywords;
 
@@ -18,9 +18,9 @@ class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer {
 
     public Label processText(String text){ // from interface TextAnalyzer
         for ( String key: keywords ) {
-             if(text.contains(key)){
-                 return Label.SPAM; // or return getLabel() ?
-             }
+            if(text.contains(key)){
+                return Label.SPAM; // or return getLabel() ?
+            }
         }
         return Label.OK;
     }

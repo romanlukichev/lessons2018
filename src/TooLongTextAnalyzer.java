@@ -1,4 +1,4 @@
-class TooLongTextAnalyzer  implements TextAnalyzer  {
+class TooLongTextAnalyzer  implements TextAnalyzer {
 
     private int  maxLength;
 
@@ -6,14 +6,16 @@ class TooLongTextAnalyzer  implements TextAnalyzer  {
         this.maxLength = maxLength;
     }
 
+
     public Label processText(String text){ // from interface TextAnalyzer
-         if( text.length() > maxLength ){
-             return Label.TOO_LONG;
-         }
-          else {
-             return Label.OK;
-         }
+        if( text.length() > maxLength ){
+            return Label.TOO_LONG;
+        }
+        else {
+            return Label.OK;
+        }
     }
+
 
 
 
