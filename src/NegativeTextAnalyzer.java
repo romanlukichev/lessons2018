@@ -1,9 +1,9 @@
-class NegativeTextAnalyzer extends KeywordAnalyzer{
+class NegativeTextAnalyzer extends KeywordAnalyzer {
 
     // NegativeTextAnalyzer will be initialized by default constructor.
     // default constructor will be created by compiler.
 
-    private String[] keywords = { ":(" ,  "=(" , ":|" };
+    private String[] keywords = {":(", "=(", ":|"};
 
 
     @Override
@@ -12,21 +12,16 @@ class NegativeTextAnalyzer extends KeywordAnalyzer{
     }
 
     @Override
-    protected Label getLabel() {  // from abstract class KeywordAnalyzer
-        return Label.NEGATIVE_TEXT;
-    }
-
-
-    @Override
-    public Label processText(String text) {
-        for ( String key: keywords ) {    //?? Реализуем processText таким образом, чтобы он зависел только от getKeywords и getLabel.
-            if(text.contains(key)){
-                return Label.NEGATIVE_TEXT; // or return getLabel() ?
+    protected Label getLabel(String inputString) {  // from abstract class KeywordAnalyzer
+        for (String key : keywords) {
+            if (inputString.contains(key)) {
+                return Label.NEGATIVE_TEXT;
             }
         }
         return Label.OK;
     }
-
-
-
 }
+
+
+
+

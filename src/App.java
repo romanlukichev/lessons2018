@@ -4,13 +4,17 @@ public class App {
         String[] spamArray = {"Go" , "Welcome" , "Hello", "Open"};
         SpamAnalyzer mySpamAnalyzer = new SpamAnalyzer(spamArray);
 
-        NegativeTextAnalyzer myNegativeWordsAnalyzer = new NegativeTextAnalyzer(); // default constructor
+        NegativeTextAnalyzer myNegativeWordsAnalyzer = new NegativeTextAnalyzer();
+        // default constructor
 
         TooLongTextAnalyzer myLongTextAnazyzer = new TooLongTextAnalyzer(30);
 
-        TextAnalyzer[] myAnalyzers = { mySpamAnalyzer , myNegativeWordsAnalyzer , myLongTextAnazyzer };
+        TextAnalyzer[] myAnalyzers = { mySpamAnalyzer ,
+                                       myNegativeWordsAnalyzer ,
+                                       myLongTextAnazyzer };
 
-        Label result = checkLabels( myAnalyzers , "Aert hdghd :( fg. Djkl dguyie." );
+        Label result = checkLabels( myAnalyzers ,
+                                   "Aert Hello hdghd dbdsdhbsh fg. Djkl dguyie." );
         System.out.println(result.toString());
 
 
